@@ -1,0 +1,33 @@
+﻿@model IEnumerable<lab6.Models.Student>
+
+<h1>Students</h1>
+
+<a href="/Student/Create">Add New Student</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>Father Name</th>
+            <th>Year</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.ContactNumber</td>
+                <td>@student.FatherName</td>
+                <td>@student.Year</td>
+                <td>
+                    <!-- Add Edit/Delete links here -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
